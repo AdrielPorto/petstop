@@ -3,7 +3,7 @@ import path from "path";
 
 const __dirname = path.resolve();
 
-const databaseDir = path.join(__dirname, "src/database"); // Caminho para a pasta "database"
+const databaseDir = process.env.DATABASE_DIR || path.join(__dirname, "src/database"); // Caminho para a pasta "database"
 
 async function execute(db) {
   try {

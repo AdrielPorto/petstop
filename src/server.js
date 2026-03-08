@@ -28,4 +28,5 @@ server
   .post("/save-stop", saveStop);
 
 // Ligando o servidor
-server.listen(5500);
+const port = process.env.PORT || 5500;
+server.listen(port, () => console.log(`Server running on port ${port}`));

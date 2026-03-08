@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: petstop
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_DIR
+        value: /data
